@@ -3,12 +3,21 @@ name: Generate Snake
 on:
   schedule:
     - cron: "0 0 * * *" # 每天午夜自动更新
-  workflow_dispatch:
+  workflow_dispatch: # 支持手动触发
+
+# 🚀 核心修复：显式赋予工作流对仓库内容的写权限，解决 128 错误
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: 必须先检出仓库代码
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: 生成贪吃蛇 SVG 图片
       - name: Generate GitHub Contribution Snake
         uses: Platane/snk@v3
         with:
@@ -19,8 +28,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Step 3: 推送到 output 分支（升级到 v4 解决 Node.js 20 弃用警告）
       - name: Push to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
