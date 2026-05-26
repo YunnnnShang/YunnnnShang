@@ -54,18 +54,11 @@
 
 ---
 
-## 📊 代码生命力看板 | GitHub Stats
-
-<!-- 采用透明与暗色系主题，完美融入 GitHub 界面，高级而不刺眼 -->
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YunnnnShang&show_icons=true&theme=transparent&title_color=fff&text_color=ccc&icon_color=7a5cff&include_all_commits=true&count_private=true" alt="Stats" width="49%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YunnnnShang&layout=compact&theme=transparent&title_color=fff&text_color=ccc" alt="Languages" width="49%" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YunnnnShang&theme=transparent&currStreakNum=fff&sideLabels=ccc&fire=7a5cff" alt="Streak" width="99%" />
-</p>
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YunnnnShang/YunnnnShang/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YunnnnShang/YunnnnShang/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/YunnnnShang/YunnnnShang/output/github-contribution-grid-snake.svg">
+</picture>
 ---
 
 <p align="center">
